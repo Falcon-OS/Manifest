@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote name="falcon"
+          fetch="https://github.com/Falcon-OS"
+          revision="12.L" />
+
   <remote name="elixir"
           fetch="https://github.com/Project-Elixir"
           revision="snow" />
@@ -37,9 +41,9 @@
   <project path="bootable/recovery" name="bootable_recovery" remote="elixir" />
   <project path="development" name="development" remote="elixir" />
   <project path="device/custom/sepolicy" name="device_custom_sepolicy" remote="elixir" />
-  <project path="manifest" name="manifest" remote="elixir" />
+  <project path="manifest" name="Android" remote="falcon" />
   <project path="platform_testing" name="platform_testing" remote="elixir" />
-  <project path="vendor/aosp" name="vendor_aosp" remote="elixir" />
+  <project path="vendor/aosp" name="vendor_aosp" remote="falcon" />
 
   <!-- Hardware repos -->
   <project path="hardware/custom/interfaces" name="hardware_custom_interfaces" remote="elixir" />
@@ -50,7 +54,7 @@
 
   <!-- Packages repos -->
   <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="elixir" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="elixir" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="falcon" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="elixir" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="elixir" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" remote="elixir" />
