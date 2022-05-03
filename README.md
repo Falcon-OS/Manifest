@@ -1,85 +1,81 @@
-<p align="center">
-  <img src="https://i.imgur.com/HkvVB5q.jpg" />
-</p>
+FalconOS 
+===========
+![FalconOS](https://github.com/Falcon-OS/Random_stuff/blob/main/falcon-banner.png)
+<p align="center"> 
 
+Fly Like Falcon ❤ 
+===================
 
-### Project Elixir [![Download Project Elixir](https://img.shields.io/sourceforge/dt/project-elixir.svg)](https://projectelixiros.com/download)
+# Requirements
+* 250GB Or More Disk Space 
+* A computer with atleast 16GB Of Ram 
+* 25GB+ Unsuable Internet 
+* A Brain with Git Knowledge 
+* Patience
 
-Project Elixir is another aftermarket AOSP ROM which basically offers minimal UI enhancement & close to Stock Android ROM with great performance, security and stability. Most of the OEMs' these days will provide slow and untimely updates, but we don't do that here. We closely follow Google to bring the latest updates to our users, and even prolong support for devices that have been declared obsolete by OEMs. Our ROMs' source code is open-source, secure, stable, and outstanding. Your experience while using Project Elixir will be butter smooth without compromising the quality of the Android experience. In short, it's perfectly balanced between Great Performance, Security, stability, minimal UI & awesome features including pixel goodies. So do not hesitate anymore, join us now and start enjoying the beauty of stock Android. Build and enjoy Project Elixir on your respective devices!
+# Preparing server
+* Make Dir For Repo Binary: 
+``` 
+    mkdir ~/bin 
+``` 
 
-To get started, you'll need to get
-familiar with [Repo](https://source.android.com/source/using-repo.html) and [Version Control with Git](https://source.android.com/source/version-control.html).
-
-### Create a directory for the source files
-
-* You can name this directory however you want, just remember to replace
-* WORKSPACE with your directory for the rest of this guide.
-* This can be located anywhere (as long as the fs is case-sensitive)
-
-```bash
-mkdir WORKSPACE
-cd WORKSPACE
+* Add directory for the repo binary to its path: 
 ```
-
-### Install Repo in the created directory
-
->> [Hint: This might take a long time]
-
-```bash
-repo init -u https://github.com/Project-Elixir/manifest -b snow
+    PATH=~/bin:$PATH 
+``` 
+* Downloading repo binary and placing it in the proper directory: 
+``` 
+   curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+``` 
+* Giving the repo binary the proper permissions 
+``` 
+   chmod a+x ~/bin/repo 
+``` 
+* Creating directory for where the ROM repo will be stored and synced 
 ```
-
->> [Hint: Want to save some space ? Then use this]
-
-```bash
-repo init --depth=1 -u https://github.com/Project-Elixir/manifest -b snow
+    mkdir ~/falcon 
+``` 
+``` 
+    cd ~/falcon 
 ```
+ Getting Started 
+--------------- 
 
-### Download the source
-```bash
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+To get started with Android, you'll need to get familiar with [Git and Repo](http://source.android.com/source/using-repo.html). To initialize your local repository using the Falcon trees, use a command like this: 
 ```
-
-### Build
-
-```bash
-# Set up environment
-. build/envsetup.sh
-# Choose a target
-lunch aosp_$device-userdebug
-# Build the code
-mka bacon -jX
+   repo init -u https://github.com/Falcon-OS/Android -b 12.L
+``` 
+To initialize a shallow clone, which will save even more space & time, use a command like this:
 ```
-
-### Credits
-
+    repo init --depth=1 -u https://github.com/Falcon-OS/Android -b 12.L
+```
+Then to sync up: 
+``` 
+   repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+``` 
+Building the source 
+--------------- 
+The source at Falcon is well configured for building. You can choose to build with or without gapps included. 
+```
+   . build/envsetup.sh 
+``` 
+Now Compile 
+``` 
+   lunch aosp_device_codename-userdebug 
+``` 
+Build 
+``` 
+   m falcon
+``` 
+Credits 
+------- 
  * [**AOSP**](https://android.googlesource.com)
  * [**LineageOS**](https://github.com/LineageOS)
  * [**PixelExperience**](https://github.com/PixelExperience)
  * [**ProtonAOSP**](https://github.com/ProtonAOSP)
  * [**ArrowOS**](https://github.com/ArrowOS)
+ * [**ProjectElixir**](https://github.com/Project-Elixir)
 
-### Adding Support
+# Telegram Support
+[![Telegram](https://github.com/Lokesh773/RandomStuff/blob/master/Telegram_button.png)](https://telegram.me/joinchat/T5Bqs0DXTeLJeGpL)
 
-- For adding your device to the list of OFFICIALLY supported devices, you need to [**Fill the form & Apply for Maintainership**](https://projectelixiros.com/documentation) and fulfil the [**Maintainership requirement**](https://projectelixiros.com/documentation). Also you can contact us on Telegram profiles below.
-
-### Follow  us for more
-
- * [**Telegram Announcements Channel**](https://t.me/Elixir_Updates)
- * [**Our OFFICIAL Website**](https://projectelixiros.com/)
- * [**Our Team**](https://projectelixiros.com/team)
- * [**Currently supported devices**](https://projectelixiros.com/download)
- * [**Changelog**](https://projectelixiros.com/changelog)
- * [**Telegram Discussion Group**](https://t.me/Elixir_Discussion)
-
-### DONATION LINKS ------------------
-
-If you have liked our work and want to support us please consider donating for servers
-
-```bash
-PAYTM UPI ID : dwarmachine24@paytm
-GPAY UPI ID: dwarmachine24@oksbi
-PAYPAL: https://www.paypal.me/uglykid24
-```
-
-# Happy Building :)
