@@ -1116,7 +1116,7 @@
   <include name="snippets/pixel-extras.xml" />
   <include name="snippets/pixel-caf.xml" />
 
-  <!-- Add all Project Elixir repos -->
-  <include name="snippets/elixir.xml" />
+  <!-- Add all Project Falcon repos -->
+  <include name="snippets/falcon.xml" />
 
 </manifest>
