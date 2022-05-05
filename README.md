@@ -65,7 +65,7 @@ Now Compile
 ``` 
 Build 
 ``` 
-   m falcon
+   m falcon -j$(nproc --all)
 ``` 
 Credits 
 ------- 
