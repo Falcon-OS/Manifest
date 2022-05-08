@@ -53,6 +53,7 @@
   <project path="hardware/motorola" name="hardware_motorola" remote="elixir" />
 
   <!-- Packages repos -->
+  <project path="packages/apps/Updater" name="packages_apps_Updater" remote="falcon" />
   <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="elixir" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="falcon" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="elixir" />
